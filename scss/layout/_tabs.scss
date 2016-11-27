@@ -1,0 +1,77 @@
+/* Resume Tab
+---------------------------------------------------------------------------------------------------- */
+
+.resume {
+  @extend %centered;
+  left: -25%;
+  width: 22.5%;
+  position: fixed;
+  background: white;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: $depth-resume;
+  &__toolbar {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 31.5px 0 34px 34px;
+    font-size: 27px;
+    color: #000;
+  }
+  &__myself {
+    img {
+      width: 50%;
+      display: block;
+      margin: auto;
+      border-radius: 5%;
+      margin-bottom: 20px;
+    }
+    .name {
+      @include text($weight: $font-weight--bold);
+        margin-bottom: rem($base__font-size);
+    }
+    .tagline {
+      @include text(rem(16px));
+      color: $grey;
+      padding: 0 rem(30px);
+      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: rem(35px);
+      }
+    }
+  }
+  &__inner {
+    display: block;
+    .banner {
+      @include text(rem(16px), $weight: $font-weight--medium);
+    }
+    &__item {
+      color: $mine-shaft;
+      @include text(rem(16px), $weight: $font-weight--light);
+      padding: 10px 12px;
+      display: block;
+      width: 250px;
+      margin: 12px auto;
+      &:focus {
+        text-decoration: none;
+        color: $color-font-primary;
+        border: none;
+      }
+      &:hover {
+        border: none;
+      }
+      &:nth-child(1){
+        @include text(rem(16px), $weight: $font-weight--medium);
+        letter-spacing: 2px;
+        padding-top: 0;
+        padding-bottom: 24px;
+        margin-top: 0;
+        margin-bottom: 24px;
+        border-bottom: solid 1px lightgrey;
+      }
+    }
+  }
+  @include respond-to(handhelds) { width: $brk-phone; left:-105%;}
+  @include respond-to(medium-screens) { width: $brk-tablet; left:-105%;}
+}

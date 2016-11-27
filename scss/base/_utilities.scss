@@ -1,0 +1,42 @@
+// ============================================================================
+// Utilites
+// ============================================================================
+
+// Import if Google Font URL is defined
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+// Calculate em values
+@function rem($target, $context: $base__font-size) {
+  @return ($target / $context) * 1rem;
+}
+
+// Mixins
+
+// Modularlly Generate A theme Color Map based on $ui-colors key-value pair
+@mixin bg-colors($map) {
+  @each $k, $v in $ui-colors {
+    &-#{$k} {
+      background-color: $v;
+    }
+  }
+}
+
+// Vertically Align any item
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// Absolute Center
+@mixin absolute-center($height, $width) {
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  height: $height;
+  width: $width;
+}

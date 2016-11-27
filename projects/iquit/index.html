@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iQuit | Resignation Letter Generator</title>
+    <link rel="stylesheet" href="styles/app.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div ng-app="iQuit" ng-controller="mainCtrl as vm" class="container">
+      <div ng-show="ready" class="letter fade delay--long">
+        <div class="content">
+          <p>Dear <span>{{user.boss}}</span>, </p>
+          <p>I am writing to formally notify you that I am resigning from
+            <span>{{user.company}}</span>. My last day of empoyment will be August 18.</p>
+          <p>During the past four years and three months, I have realized that
+            {{user.reason}}.</p>
+          <p>Thanks to you, I am deciding to pursue another path. It has
+          been a pleasure working for you.</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p>Regards,<br><span>{{user.name}}<span></p>
+        </div>
+      </div>
+      <div ng-show="editing" class="top fade delay">
+        <div class="title">
+          <img src="img/resign.png" alt="Resignation Letter" />
+        </div>
+        <h3>generator</h3>
+      </div>
+      <div class="container__inner left fold">
+        <div ng-hide="editing" class="welcome fade">
+          <img src="img/resign.png" alt="Resignation Letter" />
+          <h3 class="header">generator</h3>
+          <p class="intro">
+            Hate Your Job?
+            <a href="http://www.forbes.com/sites/susanadams/2014/06/20/most-americans-are-unhappy-at-work/#1ab90f0d5862">52.3% of Americans</a> feel the same.
+          </br>It's okay to tell your boss, "I Quit."
+          </p>
+          <a ng-click="editing = true" href="" class="quit">quit now</a>
+        </div>
+        <div ng-show="editing" class="form fade delay">
+          <formly-form model="user" fields="userFields">
+          </formly-form>
+          <button type="submit" class="btn btn-default" ng-click="onSubmit(user); ready = true; expandRight={width: '100%', left: '0'}">Next</button>
+        </div>
+      </div>
+      <div ng-style="expandRight" class="container__inner right">
+        <div class="typewriter">
+          <img src="img/typewriter.jpeg" alt="typewriter" />
+        </div>
+        <div ng-hide="ready" class="resign-letter">
+          <p>I QUIT.</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.min.js"></script>
+    <script type="text/ng-template" id="custom.html">
+      <div class="form-group">
+        <label for="{{::id}}">{{options.templateOptions.label}}</label>
+        <input id="{{::id}}" name="{{::id}}" class="form-control" ng-model="model[options.key]" />
+      </div>
+    </script>
+  </body>
+</html>

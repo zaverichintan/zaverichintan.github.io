@@ -1,0 +1,24 @@
+
+%btn-basic {
+  width: rem(30px);
+  height: rem(30px);
+  cursor: pointer;
+}
+
+%stick-top-left {
+  position: absolute;
+  top: rem(25px);
+  left: rem(25px);
+}
+
+%stick-top-right {
+  position: absolute;
+  top: rem(25px);
+  right: rem(25px);
+}
+
+%animate-spin {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  transform: rotate(270deg);
+}

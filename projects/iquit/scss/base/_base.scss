@@ -1,0 +1,17 @@
+html {
+  overflow: hidden;
+  body { font-family: $font-family--typewriter }
+}
+a {
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
+}
+
+textarea {
+  resize: none;
+}
+img {
+  width: 100%;
+}

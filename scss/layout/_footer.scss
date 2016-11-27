@@ -1,0 +1,43 @@
+/* Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.social-footer {
+  @extend %centered;
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  height: 50px;
+  background: $color-grey-background;
+  margin-top: 20px;
+  line-height: 50px;
+  li {
+    display: inline-block;
+    padding: 0 25px;
+    a span {
+      vertical-align: middle;
+      font-size: 16px;
+    }
+    .icon {
+      margin-right: 5px;
+      vertical-align: middle;
+      @include text(2.4rem);
+    }
+  }
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+    &-linkedin {
+      content: url(#{$path-icon}/social-linkedin-outline.svg);
+    }
+
+    &-github {
+      content: url(#{$path-icon}/social-github-outline.svg);
+    }
+
+    &-email {
+      content: url(#{$path-icon}/ios-email-outline.svg);
+    }
+}
