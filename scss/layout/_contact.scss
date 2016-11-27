@@ -1,0 +1,129 @@
+$body-bg: #fff;
+// social media sharing colors
+$facebook: #3b5998; // rgb(59, 89, 152)
+$twitter: #00aced; // rgb(0, 172, 237)
+$github: #800080; // rgb(221, 75, 57)
+$pinterest: #cc2127; // rgb(204, 33, 39)
+$instagram: #784cac; //, rgb(120, 76, 172)
+$linked-in: #007bb6; // rgb(0, 123, 182)
+
+.block.contact {
+  .get-in-touch {
+    margin: 200px 5% 100px 5%;
+    height: 80%;
+    h1 {
+      display: inline;
+      opacity: 0;
+      &.code {
+        font-family: Menlo,Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+      }
+      &.life.color-this {
+        margin-left: rem(10px);
+        color: #55ACEE;
+      }
+    }
+    .divider {
+      width: 300px;
+      margin: 0 auto;
+    }
+    .social-media {
+      margin: 30px;
+      * {
+        box-sizing: border-box;
+        &:focus,
+        &:active,
+        &:focus:active {
+          outline: none;
+        }
+      }
+      a {
+        border-bottom: none;
+        opacity: 0;
+        &.social {
+          display: inline-block;
+          height: 40px;
+          line-height: 40px;
+          margin-right: 10px;
+          overflow: hidden;
+          position: relative;
+          text-indent: -9999em;
+          visibility: hidden;
+          width: 40px;
+          &:before,
+          &:after {
+            color: $body-bg;
+            content: "";
+            display: inline-block;
+            font-family: FontAwesome;
+            font-size: 30px;
+            height: 40px;
+            line-height: 44px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            text-indent: 0;
+            visibility: visible;
+            width: 40px;
+          }
+          &:after {
+            left: 0;
+            position: absolute;
+          }
+        }
+        &.email {
+          &:before {
+            background: $facebook;
+          }
+          &:after {
+            content: "\f003";
+            top: -3px;
+          }
+        }
+        &.phone {
+          &:before {
+            background: $twitter;
+          }
+          &:after {
+            content: "\f10b";
+            top: -2px;
+          }
+        }
+        &.linked-in {
+          &:before {
+            background: $linked-in;
+          }
+          &:after {
+            content: "\f0e1";
+            top: -1px;
+          }
+        }
+        &.github {
+          &:before {
+            background: $github;
+          }
+          &:after {
+            content: "\f09b";
+            top: -2px;
+          }
+        }
+        &.instagram {
+          &:before {
+            background: $instagram;
+          }
+          &:after {
+            content: "\f16d";
+            top: -1px;
+          }
+        }
+      }
+    }
+    .icon-tilt {
+      a {
+        transition: all .3s ease-in;
+        &:hover {
+          transform: rotate(-7deg);
+        }
+      }
+    }
+  }
+}

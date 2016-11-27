@@ -1,0 +1,34 @@
+/* Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $depth-nav;
+  a {
+    @extend %centered;
+    display: inline-block;
+    padding: 0 rem(15px);
+    line-height: rem(40px);
+    margin-top: rem(35px);
+    margin-bottom: rem(35px);
+    -webkit-transition: .4s;
+	  -moz-transition: .4s;
+	  -o-transition: .4s;
+	  -ms-transition: .4s;
+	  transition: .4s;
+    &.active, &:hover, &:focus {
+      background-color: $color-href-hover;
+      color: $white;
+      border: none;
+    }
+    &:nth-child(1) {
+      margin-left: rem(55px) !important;
+      &:after {
+        content: "|";
+        margin-left: rem(15px);
+      }
+    }
+  }
+}

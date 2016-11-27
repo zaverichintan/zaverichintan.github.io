@@ -1,0 +1,44 @@
+
+// Center Text
+
+%centered {
+  text-align: center;
+}
+
+%fullpage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+%hide-scrollbar-container {
+  overflow: hidden;
+}
+
+%hide-scrollbar-container__inner {
+  overflow: auto;
+  padding-right: 15px;
+}
+
+
+// Clear After
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Screen Reader Text
+%srt {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}

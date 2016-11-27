@@ -1,0 +1,29 @@
+.btn {
+  // using mixins to dynamically generate theme-color pair
+  padding: 10px 0;
+  border: 1px solid $mine-shaft;
+  color: $mine-shaft;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+  &.project {
+    margin: 1.7rem;
+    @include text(rem(15px), 1.625, $weight: $font-weight--medium, $color: $color-font-primary);
+    transition: border .4s, color .4s, background-color .4s;
+    border-radius: 5px;
+    &:hover {
+      color: $white;
+      border-bottom: 1px solid $mine-shaft;
+      background-color: $color-href-hover;
+      border: 1px solid $color-href-hover;
+    }
+  }
+}
+
+.btn-close {
+  @extend %btn-basic;
+  @extend %stick-top-left;
+}

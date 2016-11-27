@@ -1,0 +1,100 @@
+html {
+  font-size: 62.5%;
+  /* 10px browser default */
+}
+
+/* Chrome fix */
+
+body {
+  > div {
+    font-size: 2 * rem($base__font-size);
+  }
+  @include text(1.7 * rem($base__font-size), 1.625, $weight: $font-weight--light, $color: $color-font-primary);
+  overflow: hidden;
+  background-color: $color-light-background;
+  font-family: $font-family--primary;
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection, ::selection {
+  background-color: $mine-shaft;
+  color: $white;
+}
+
+a {
+  color: $color-font-primary;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: $color-href-hover;
+    outline: none;
+    border-bottom: solid 1px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  margin: 0 0 rem(20px);
+  padding: 0;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+hr {
+  border: 0;
+  border-collapse: collapse;
+  border-bottom: 1px solid $alto;
+  clear: left;
+  margin: 0 0 40px;
+  padding-top: 40px;
+}
+
+/* Headings
+--------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  @include text($l-height: 1.2, $weight: $font-weight--medium);
+  font-family: $font-family--primary;
+  margin: 0 0 20px;
+}
+
+h1 {
+  @include text(rem(36px));
+}
+
+h2 {
+  @include text(rem(30px));
+}
+
+h3 {
+  @include text(rem(28px));
+}
+
+h4 {
+  @include text(rem(24px));
+}
+
+.entry-content h4 {
+  @include text(2rem);
+  letter-spacing: 1px;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+h5 {
+  @include text(rem(20px));
+}
+
+h6 {
+  @include text(rem(18px));
+}

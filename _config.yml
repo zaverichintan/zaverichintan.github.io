@@ -1,0 +1,6 @@
+name: Chintan Zaveri, Interactive Resume
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
