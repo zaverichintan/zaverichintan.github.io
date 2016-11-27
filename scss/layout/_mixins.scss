@@ -1,5 +1,0 @@
-// Calculate Skills Section text Position
-@mixin position_skill_text($x, $y, $off-x:null, $off-y:null) {
-  left: calc(#{$x} - #{$off-x});
-  top: calc(#{$y} - #{$off-y});
-}

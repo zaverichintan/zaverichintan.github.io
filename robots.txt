@@ -1,6 +1,0 @@
-# robots.txt for https://patdujour.github.com/
-
-User-agent: *
-Disallow: /cyberworld/map/ # This is an infinite virtual URL space
-Disallow: /legacy/ # these are no longer supported
-Disallow: /modular.html #deprecated
