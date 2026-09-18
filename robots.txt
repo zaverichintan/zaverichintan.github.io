@@ -1,6 +1,6 @@
-# robots.txt for https://patdujour.github.com/
+# robots.txt for https://zaverichintan.github.io/
 
 User-agent: *
-Disallow: /cyberworld/map/ # This is an infinite virtual URL space
-Disallow: /legacy/ # these are no longer supported
-Disallow: /modular.html #deprecated
+Disallow: /legacy/   # archived previous version of this site
+
+Sitemap: https://zaverichintan.github.io/sitemap.xml

@@ -1,6 +1,10 @@
-name: Chintan Zaveri, Interactive Resume
+title: Chintan Zaveri
+description: Deep Learning & Machine Learning Engineer in Berlin.
+url: https://zaverichintan.github.io
+author: Chintan Zaveri
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+exclude:
+  - legacy
