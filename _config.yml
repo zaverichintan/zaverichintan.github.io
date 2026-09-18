@@ -7,6 +7,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+exclude:
+  - README.md
+
 defaults:
   - scope:
       path: legacy
